@@ -1,6 +1,13 @@
-function showInfo() {
-    const ism = document.getElementById("ism").value;
-    const yosh = document.getElementById("yosh").value;
+const readline = require("readline");
 
-    console.log(`Sizning ismingiz ${ism} va yoshingiz ${yosh}`);
-}
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout
+});
+
+rl.question("Ismingizni kiriting: ", function(ism) {
+    rl.question("Yoshingizni kiriting: ", function(yosh) {
+        console.log(`Sizning ismingiz ${ism} va yoshingiz ${yosh}`);
+        rl.close();
+    });
+});
