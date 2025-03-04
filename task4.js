@@ -1,12 +1,7 @@
-const readline = require('readline');
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+let Yil = +prompt("Tug'ilgan yilingizni kiriting: ");
 
-rl.question("Tug'ilgan yilingizni kiriting: ", (year) => {
-    const currentYear = new Date().getFullYear();
-    const age = currentYear - parseInt(year);
-    console.log("Sizning yoshingiz:", age);
-    rl.close();
-});
+let HozirgiYil = new Date().getFullYear(); 
+
+let Yosh = HozirgiYil - Yil; 
+
+console.log("Sizning yoshingiz: " + Yosh);
